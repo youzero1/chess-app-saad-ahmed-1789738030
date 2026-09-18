@@ -25,7 +25,7 @@ export function ChessBoard({ state, selected, legalTargets, lastMove, interactiv
   }
 
   return (
-    <div className="rounded-xl bg-wood-frame p-3 shadow-2xl ring-4 ring-black/30 sm:p-4">
+    <div className="rounded-xl bg-frame p-3 shadow-2xl ring-4 ring-black/30 sm:p-4">
       <div className="grid aspect-square w-full grid-cols-8 overflow-hidden rounded-md shadow-inner">
         {squares.map((sq) => {
           const file = fileOf(sq);
@@ -44,22 +44,22 @@ export function ChessBoard({ state, selected, legalTargets, lastMove, interactiv
               onClick={() => onSelect(sq)}
               disabled={!interactive}
               className={`relative flex items-center justify-center ${
-                isLight ? "bg-wood-light" : "bg-wood-dark"
+                isLight ? "bg-board-light" : "bg-board-dark"
               } ${interactive ? "cursor-pointer" : "cursor-default"} focus:outline-none`}
             >
-              {isLastMove && <span className="absolute inset-0 bg-yellow-300/35" />}
+              {isLastMove && <span className="absolute inset-0 bg-accent/30" />}
               {isSelected && (
-                <span className="absolute inset-0 ring-4 ring-inset ring-emerald-500/80" />
+                <span className="absolute inset-0 ring-4 ring-inset ring-accent/90" />
               )}
               {isCheckedKing && (
-                <span className="absolute inset-0 animate-pulse bg-red-600/45" />
+                <span className="absolute inset-0 animate-pulse bg-accent/60" />
               )}
 
               {/* Coordinate labels on edge squares */}
               {file === 0 && (
                 <span
                   className={`absolute left-0.5 top-0.5 text-[0.55rem] font-bold sm:text-xs ${
-                    isLight ? "text-wood-dark" : "text-wood-light"
+                    isLight ? "text-board-dark" : "text-board-light"
                   }`}
                 >
                   {rank + 1}
@@ -68,7 +68,7 @@ export function ChessBoard({ state, selected, legalTargets, lastMove, interactiv
               {rank === 0 && (
                 <span
                   className={`absolute bottom-0.5 right-0.5 text-[0.55rem] font-bold sm:text-xs ${
-                    isLight ? "text-wood-dark" : "text-wood-light"
+                    isLight ? "text-board-dark" : "text-board-light"
                   }`}
                 >
                   {FILES[file]}
@@ -79,10 +79,10 @@ export function ChessBoard({ state, selected, legalTargets, lastMove, interactiv
 
               {/* Legal move indicators */}
               {target && !piece && (
-                <span className="absolute h-1/4 w-1/4 rounded-full bg-emerald-700/45" />
+                <span className="absolute h-1/4 w-1/4 rounded-full bg-accent/50" />
               )}
               {target && piece && (
-                <span className="absolute inset-0 rounded-full ring-4 ring-inset ring-emerald-600/70" />
+                <span className="absolute inset-0 rounded-full ring-4 ring-inset ring-accent/80" />
               )}
             </button>
           );

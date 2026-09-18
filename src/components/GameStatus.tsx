@@ -14,34 +14,34 @@ export function GameStatus({ status, turn, onNewGame }: GameStatusProps) {
   if (status === "checkmate") {
     banner =
       turn === "w"
-        ? { text: "Checkmate — AI wins", className: "bg-red-800 text-red-50" }
-        : { text: "Checkmate — You win! 🏆", className: "bg-emerald-700 text-emerald-50" };
+        ? { text: "Checkmate — AI wins", className: "bg-accent-dark text-red-50" }
+        : { text: "Checkmate — You win! 🏆", className: "bg-board-dark text-green-50" };
     turnText = "Game over";
   } else if (status === "stalemate") {
-    banner = { text: "Stalemate — Draw", className: "bg-amber-600 text-amber-50" };
+    banner = { text: "Stalemate — Draw", className: "bg-frame text-green-50" };
     turnText = "Game over";
   } else if (status === "draw") {
-    banner = { text: "Draw", className: "bg-amber-600 text-amber-50" };
+    banner = { text: "Draw", className: "bg-frame text-green-50" };
     turnText = "Game over";
   } else {
     turnText = turn === "w" ? "White to move" : "Black (AI) is thinking…";
   }
 
   return (
-    <section className="rounded-lg border-2 border-wood-frame/60 bg-parchment p-4 shadow-lg">
+    <section className="rounded-lg border-2 border-frame/60 bg-panel p-4 shadow-lg">
       <div className="flex items-center justify-between gap-3">
         <p className="font-serif text-lg font-bold text-ink">{turnText}</p>
         <button
           type="button"
           onClick={onNewGame}
-          className="rounded-md bg-wood-frame px-4 py-2 text-sm font-semibold text-parchment shadow transition-colors hover:bg-wood-dark focus:outline-none focus:ring-2 focus:ring-parchment/70"
+          className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white shadow transition-colors hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent/50"
         >
           New Game
         </button>
       </div>
 
       {status === "check" && (
-        <p className="mt-2 inline-block rounded bg-red-700/15 px-2 py-1 text-sm font-bold text-red-800">
+        <p className="mt-2 inline-block rounded bg-accent/15 px-2 py-1 text-sm font-bold text-accent-dark">
           Check!
         </p>
       )}

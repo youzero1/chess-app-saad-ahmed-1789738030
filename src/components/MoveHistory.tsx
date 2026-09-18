@@ -18,8 +18,8 @@ export function MoveHistory({ history }: { history: HistoryEntry[] }) {
   }
 
   return (
-    <section className="flex min-h-0 flex-1 flex-col rounded-lg border-2 border-wood-frame/60 bg-parchment p-4 shadow-lg">
-      <h2 className="mb-2 border-b border-wood-frame/30 pb-2 font-serif text-lg font-bold tracking-wide text-ink">
+    <section className="flex min-h-0 flex-1 flex-col rounded-lg border-2 border-frame/60 bg-panel p-4 shadow-lg">
+      <h2 className="mb-2 border-b border-frame/30 pb-2 font-serif text-lg font-bold tracking-wide text-ink">
         Moves
       </h2>
       {rows.length === 0 ? (
@@ -29,7 +29,7 @@ export function MoveHistory({ history }: { history: HistoryEntry[] }) {
           <table className="w-full text-sm">
             <tbody>
               {rows.map((row) => (
-                <tr key={row.num} className="odd:bg-wood-frame/10">
+                <tr key={row.num} className="odd:bg-frame/10">
                   <td className="w-8 py-0.5 pl-1 font-semibold text-ink/60">{row.num}.</td>
                   <td className="py-0.5 pl-2 font-medium text-ink">{row.white}</td>
                   <td className="py-0.5 pl-2 font-medium text-ink">{row.black ?? ""}</td>

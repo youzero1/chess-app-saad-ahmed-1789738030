@@ -15,10 +15,10 @@ function HomePage() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center px-4 py-8">
       <header className="mb-6 text-center">
-        <h1 className="font-serif text-4xl font-bold tracking-wide text-parchment drop-shadow-md sm:text-5xl">
+        <h1 className="font-serif text-4xl font-bold tracking-wide text-panel drop-shadow-md sm:text-5xl">
           ♞ Chess
         </h1>
-        <p className="mt-1 text-sm text-parchment/80">You play White — the AI plays Black</p>
+        <p className="mt-1 text-sm text-panel/80">You play White — the AI plays Black</p>
       </header>
 
       <div className="flex w-full flex-col items-center gap-6 lg:flex-row lg:items-start lg:justify-center">
