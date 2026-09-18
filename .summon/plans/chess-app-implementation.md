@@ -1,5 +1,5 @@
 ---
-status: pending
+status: implemented
 title: Single-player chess app vs AI with move history and wooden theme
 ---
 
