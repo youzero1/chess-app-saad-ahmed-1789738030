@@ -14,14 +14,14 @@ export function GameStatus({ status, turn, onNewGame }: GameStatusProps) {
   if (status === "checkmate") {
     banner =
       turn === "w"
-        ? { text: "Checkmate — AI wins", className: "bg-accent-dark text-red-50" }
-        : { text: "Checkmate — You win! 🏆", className: "bg-board-dark text-green-50" };
+        ? { text: "Checkmate — AI wins", className: "bg-accent-dark text-amber-50" }
+        : { text: "Checkmate — You win! 🏆", className: "bg-board-dark text-amber-50" };
     turnText = "Game over";
   } else if (status === "stalemate") {
-    banner = { text: "Stalemate — Draw", className: "bg-frame text-green-50" };
+    banner = { text: "Stalemate — Draw", className: "bg-frame text-amber-50" };
     turnText = "Game over";
   } else if (status === "draw") {
-    banner = { text: "Draw", className: "bg-frame text-green-50" };
+    banner = { text: "Draw", className: "bg-frame text-amber-50" };
     turnText = "Game over";
   } else {
     turnText = turn === "w" ? "White to move" : "Black (AI) is thinking…";
