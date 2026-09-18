@@ -6,8 +6,9 @@
 5 silly config load:file:/.sprite/languages/node/nvm/versions/node/v24.18.0/etc/npmrc
 6 verbose title npm run dev --config vite.sprites-preview.config.ts --port 8080 --strictPort --host 0.0.0.0
 7 verbose argv "run" "dev" "--" "--config" "vite.sprites-preview.config.ts" "--port" "8080" "--strictPort" "--host" "0.0.0.0"
-8 verbose logfile logs-max:10 dir:/home/sprite/.npm/_logs/2026-09-18T14_01_54_647Z-
-9 verbose logfile /home/sprite/.npm/_logs/2026-09-18T14_01_54_647Z-debug-0.log
-10 silly logfile done cleaning log files
-11 notice run chess-app@0.1.0 dev
-12 notice run vite --config vite.sprites-preview.config.ts --port 8080 --strictPort --host 0.0.0.0
+8 verbose logfile logs-max:10 dir:/home/sprite/.npm/_logs/2026-09-18T15_41_02_147Z-
+9 verbose logfile /home/sprite/.npm/_logs/2026-09-18T15_41_02_147Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 notice run chess-app@0.1.0 dev
+13 notice run vite --config vite.sprites-preview.config.ts --port 8080 --strictPort --host 0.0.0.0
